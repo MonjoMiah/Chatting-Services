@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>Socket.IO Sign Up</title>
+    <link rel="shortcut icon" href="images/messages_512.webp">
+	<link rel="stylesheet" type="text/css" href="signup/style.css">
+    <style>
+
+    </style>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function () {
+           $('#btnSignUp').click(function(e){
+                  var oUserInfo = {
+                    "userId": $('#txtUser').val()
+                };
+              sessionStorage.setItem('userInfo', JSON.stringify(oUserInfo));
+              window.location.replace("http://localhost:3000/chat");
+            });
+        });
+		
+     </script>
+</head>
+<body>
+<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+			<div class="signup">
+				<form>
+					<label for="chk"  aria-hidden="true">Sign up</label>
+					<input type="text" id="txtUser" name="txt" placeholder="User name">
+					<input type="" id="txtUser"  name="" placeholder="Email" >
+					<input type="Password" id="txtUser"  name="pswd" placeholder="Password">
+					 <input type="button" id="btnSignUp" value="Sign Up" >
+				</form>
+			</div>
+	</div>
+</body>
+</html>
